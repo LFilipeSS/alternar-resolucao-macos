@@ -23,10 +23,20 @@ Foi criado para alternar um Samsung Odyssey de 49 polegadas entre o modo ultrawi
 
 ## Instalação
 
+### Pelo arquivo DMG
+
+1. Abra `Alternar-Resolucao-1.0.dmg`.
+2. Arraste **Alternar Resolução** para **Applications**.
+3. Abra o aplicativo pela pasta Aplicativos.
+
+Como o projeto não usa um certificado Apple Developer, em outro Mac talvez seja necessário clicar com o botão direito no aplicativo e escolher **Abrir** na primeira execução.
+
+### Compilando o projeto
+
 No Terminal, dentro da pasta do projeto:
 
 ```sh
-chmod +x build.sh install.sh uninstall.sh
+chmod +x build.sh create-dmg.sh install.sh uninstall.sh
 ./install.sh
 ```
 
@@ -56,6 +66,7 @@ O projeto usa as APIs nativas `AppKit` e `CoreGraphics`. Os modos são obtidos c
 - `ToggleResolution.swift`: aplicativo da barra de menus.
 - `Info.plist`: metadados do bundle.
 - `build.sh`: compilação e assinatura local.
+- `create-dmg.sh`: cria o instalador DMG em `dist/`.
 - `install.sh`: instalação no usuário atual.
 - `uninstall.sh`: remoção do aplicativo e da inicialização automática.
 
